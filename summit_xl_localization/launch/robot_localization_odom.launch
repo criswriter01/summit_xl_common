@@ -5,7 +5,7 @@
   <arg name="prefix" default="$(arg id_robot)_"/>
 	<arg name="odom_frame" default="$(arg prefix)odom"/> 
   <arg name="base_frame" default="$(arg prefix)base_footprint"/>
-	<arg name="odom_topic" default="robotnik_base_control/odom"/>
+	<arg name="odom_topic" default="/robot/robotnik_base_control/odom"/>
   <arg name="imu_topic" default="imu/data"/>
 
      <!--node pkg="tf" type="static_transform_publisher" name="fcu_broadcaster" args="0 -0.1 0.40 0 0 0 1 base_footprint fcu 50"/--> 

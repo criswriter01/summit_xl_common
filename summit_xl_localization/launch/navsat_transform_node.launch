@@ -70,7 +70,8 @@
         <!-- Publish the transform between utm and world 
 	(frame of the input odometry data, in this case /odometry/filtered_world) 
 	It is a static transform -->
-        <param name="broadcast_utm_transform" value="true"/>
+        <!--<param name="broadcast_utm_transform" value="true"/> -->
+        <param name="broadcast_cartesian_transform" value="true"/>
         <param name="publish_filtered_gps" value="true" />
 
         <!-- Placeholders for input remapping. Set your topic names as the "to" values.-->
@@ -80,6 +81,8 @@
         <!-- Used to get the current odometry 
              It should be the output of the 'world' instance of robot_localization -->
         <remap from="/odometry/filtered" to="/odometry/filtered_world" /> 
+        <remap from="/imu/data" to="/robot/imu/data" />
+        <remap from="/gps/fix" to="/robot/gps/fix" />
        
         <!-- remap from="/imu/data" to="/imu/data"/ -->      <!-- used to get the initial absolute orientation, after it gets it, the node UNSUBSCRIBES from the topic -->
     
